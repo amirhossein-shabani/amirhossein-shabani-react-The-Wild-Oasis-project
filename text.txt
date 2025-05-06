@@ -1,0 +1,6 @@
+ the features i want to implement on this project by my self : 
+
+ 1 - the features of adding or editing the bookings .
+ (because with out these features the project uselless , the users of these project )
+ p - we don't need to creat section for the guset becuase the guest have to create in another web which the hotel have for them , this web for the employes . 
+ 
