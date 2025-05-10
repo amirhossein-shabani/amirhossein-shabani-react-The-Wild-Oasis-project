@@ -10,7 +10,6 @@ function Dashboard() {
         <Heading as="h1">Dashboard</Heading>
         <DashboardFilter />
       </Row>
-
       <DashboardLayout />
     </>
   );

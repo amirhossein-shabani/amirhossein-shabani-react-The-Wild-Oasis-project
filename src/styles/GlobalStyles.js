@@ -206,6 +206,11 @@ img {
   height: 0;
 }
 
+
+
+
+
+
 `;
 
 export default GlobalSyles;

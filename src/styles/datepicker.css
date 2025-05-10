@@ -1,0 +1,48 @@
+.datepicker-container {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* Ensure it aligns with the input width */
+}
+
+.react-datepicker-popper {
+  z-index: 1050; /* Ensure it appears above other elements */
+}
+
+.react-datepicker__input-container {
+  position: relative;
+  display: flex;
+  align-items: center; /* Align the icon and text 
+  vertically */
+  padding-left: 5px;
+}
+
+.react-datepicker__input-container input {
+  width: 100%; /* Ensure the input takes full width */
+  padding: 8px 5px 8px 30px; /* Add padding to the left for the icon */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: transparent !important;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.react-datepicker__input-container .react-datepicker__input-icon {
+  position: absolute;
+  left: 8px; /* Position the icon inside the input */
+  pointer-events: none; /* Prevent the icon from blocking clicks */
+}
+
+.react-datepicker {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.react-datepicker__header {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ccc;
+}
+
+.react-datepicker__day--selected {
+  background-color: #007bff;
+  color: #fff;
+}

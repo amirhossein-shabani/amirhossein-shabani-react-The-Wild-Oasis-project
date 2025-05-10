@@ -3,7 +3,7 @@ import styled from "styled-components";
 const StyledFormRow = styled.div`
   display: grid;
   align-items: center;
-  grid-template-columns: 24rem 1fr 1.2fr;
+  grid-template-columns: 20rem 0.8fr; /* Two columns: label and input */
   gap: 2.4rem;
 
   padding: 1.2rem 0;
@@ -32,16 +32,25 @@ const Label = styled.label`
 `;
 
 const Error = styled.span`
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--color-red-700);
+  grid-column: span 2; /* Error spans across both columns */
+  margin-top: 0.8rem;
+  padding-left: 1rem;
 `;
 
 function FormRow({ label, error, children }) {
   return (
     <StyledFormRow>
-      {label && <Label htmlFor={children.props.id}>{label}</Label>}
-      {children}
-      {error && <Error>{error}</Error>}
+      {label && (
+        <Label htmlFor={children.props?.id || children.props?.name}>
+          {label}
+        </Label>
+      )}
+      <div>
+        {children}
+        {error && <Error>{error}</Error>}
+      </div>
     </StyledFormRow>
   );
 }

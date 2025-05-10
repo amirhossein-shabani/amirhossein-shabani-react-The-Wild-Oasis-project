@@ -14,6 +14,8 @@ const StyledModal = styled.div`
   box-shadow: var(--shadow-lg);
   padding: 3.2rem 4rem;
   transition: all 0.5s;
+
+  z-index: 1000; /* Lower than the DatePicker's z-index */
 `;
 
 const Overlay = styled.div`
@@ -82,7 +84,7 @@ function Open({ children, opens: openWindowName }) {
 function Window({ children, name }) {
   const { openName, close } = useContext(ModalContext);
 
-  const ref = useOutsideClick(close);
+  const ref = useOutsideClick(close, true, ".react-datepicker");
 
   if (name !== openName) return null;
 
