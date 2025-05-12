@@ -161,6 +161,21 @@ function CreateBookingForm() {
             })}
           />
         </FormRow>
+        <FormRow label="Num Guests" error={errors?.numGuests?.message}>
+          <Input
+            type="number"
+            id="numGuests"
+            {...register("numGuests", {
+              required: "This field is required",
+              validate: (value) => {
+                if (parseInt(value, 10) < 1) {
+                  return "The number of guests must be at least 1";
+                }
+                return true;
+              },
+            })}
+          />
+        </FormRow>
         <FormRow>
           <Button>Create new Booking</Button>
         </FormRow>
